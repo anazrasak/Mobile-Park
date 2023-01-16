@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mobile Park</title>
+   <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="container"> 
+    <div class="navbar">
+	   <div class="logo">
+	        MOBILE PARK
+	</div>
+	<nav>
+	    <ul id="MenuItems">
+		   <li><a href="index.html">Home</a></li>
+		   <li><a href="product.html">Products</a></li>
+		   <li><a href="contactus.html">Contact us</a></li>
+		   <li><a href="">Orders</a></li>
+		   <li><a href="login.html">Account</a></li>
+	    </ul>
+	</nav>
+	<img src="cart.png" width="30px" height="30px">
+	<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+	    </div>
+  </div>
+ <!------------ single product datalis ----------------->
+ <div class="small-container single-product">
+  		  <p><a href="product.html">Home</a> / Pendrive 32GB</p>
+    <div class="row">
+	    <div class="col-2">
+		  <img src="sandiscusb32-1.jpeg" width="100%" id="ProductImg">
+		  
+		  <div class="small-img-row">
+		    <div class="small-img-col">
+			  <img src="sandiscusb32-1.jpeg" width="100%" class="small-img">
+			</div>
+			<div class="small-img-col">
+			  <img src="sandiscusb32-2.jpeg" width="100%" class="small-img">
+			</div>
+			<div class="small-img-col">
+			  <img src="sandiscusb32-3.jpeg" width="100%" class="small-img">
+			</div>
+		  
+		  
+		</div>
+		<div class="col-2">
+		    <h1>Sandisk Pendrive 32GB</h1>
+			<h3>(Black.Red)</h3><br>
+			<p>Select RAM for viewing price.</p>
+		    <h4><form><input type="button" value="16GB" onclick='usb16()'/>&nbsp&nbsp
+              <input type="button" value="32GB" onclick='usb32()'/><br><br>&nbsp&nbsp&nbsp&nbsp
+             <output id="answer">
+             </form></h4>
+			 <input type="number" value="1">
+			  <a href="" class="btn">Add To Cart</a><br><br><br><br><br>
+			  <h3>Product Details</h3>
+			    <ul>
+				   <li>
+                       Meet the SanDisk Cruzer Blade 32 GB pendrive - your friendly storage device.
+                       Store all that you want, from movies to songs, pictures to videos, PDF files to documents,
+	                   this in USB 2.0</li><BR><BR>
+			       <li>USB 2.0|32 GB</li>
+                   <li>Color:Black, Red</li>
+                   <li>For Laptop, Desktop Computer, Television, Audio Playe</li>
+                   <li></li>
+				 </ul><br><br><br><br>
+
+
+		</div>
+	</div>
+</div>
+
+<!--------- featured products ------------->
+<div class="small-container">
+	  
+
+	      
+	</div>
+</div>
+ <!------------- footer ------------>
+ <div class="footer">
+    <div class="containter">
+	   <div class="row">
+	      <div class="footer-col-1">
+		     <h3> Download Our App</h3>
+		     <p> Download App for Android  and ios mobile phones</p>
+		  </div>
+		  <div class="footer-col-2">
+		 <h3> MOBILE PARK</h3>
+		     
+		     <p> Our Purpose is to Sustainably make the pleasure and Benfits of
+			 Tech accessible to the many</p>
+		  </div>
+
+		  <div class="footer-col-4">
+		     <h3> Follow Us</h3>
+		     <ul>
+			    <li> Facebook </li>
+			    <li> Twitter </li>
+			    <li> Instagram </li>
+			    <li> Youtube </li>
+			</ul>	
+		  </div>
+	   </div>
+	   <hr>
+	   <p class="copyright"> All Copyright reserved </p>
+	</div>
+  </div>
+ </div>
+ 
+ <!-------------- JavaScript for toggle menu------------->
+   <script>
+      var MenuItems = document.getElementById("MenuItems");
+	   
+	   MenuItems.style.maxHeight = "0px";
+	   
+	   function menutoggle(){
+	       if(MenuItems.style.maxHeight == "0px")
+		      {
+			     MenuItems.style.maxHeight ="200px";
+			  }
+			else
+			  {
+			     MenuItems.style.maxHeight ="0px";
+			  }
+	   }
+	  
+   </script>
+   
+  <!-------------- JavaScript for 32gb and 16gb------------->  
+<script>
+function usb16()
+{
+var c;
+c=449.0;
+document.getElementById("answer").value=c;
+}
+function usb32()
+{
+var c;
+c=549.0;
+document.getElementById("answer").value=c;
+}
+
+</script>
+
+
+<!------ js for Product Gallery ---------->
+
+  <script>
+    var ProductImg = document.getElementById("ProductImg");
+	var SmallImg = document.getElementsByClassName("small-img");
+	
+	  SmallImg[0].onclick = function()
+	   {
+	     ProductImg.src = SmallImg[0].src;  
+	   }
+	    SmallImg[1].onclick = function()
+	   {
+	     ProductImg.src = SmallImg[1].src;  
+	   }
+	    SmallImg[2].onclick = function()
+	   {
+	     ProductImg.src = SmallImg[2].src;  
+	   }
+	    SmallImg[3].onclick = function()
+	   {
+	     ProductImg.src = SmallImg[3].src;  
+	   }
+   </script>
+   
+</body>
+</html>	
